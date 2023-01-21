@@ -1,24 +1,32 @@
-function Tweet() {
+import Actions from "./Actions/Actions";
+import Message from "./Message/Message";
+import ProfileImage from "./ProfileImage/ProfileImage";
+import Timestamp from "./Timestamp/Timestamp";
+import User from "./User/User";
+
+function Tweet(props) {
   return (
     <div className="tweet">
-      <img
-        src="https://www.tecnoempleo.com/logotipos/202114.png?02"
+      {/* <img
+        src={props.tweet.user.image}
         className="profile"
         alt="profile"
-      />
+      /> */}
+      <ProfileImage tweet={props.tweet.user}/>
+      
 
       <div className="body">
         <div className="top">
           <span className="user">
-            <span className="name">GammaTech</span>
-            <span className="handle">@gammatech</span>
+            <span className="name">{props.tweet.user}</span>
+            <span className="handle">@{props.tweet.user}</span>
           </span>
 
-          <span className="timestamp">Dec 06, 2022</span>
+          <span className="timestamp">{props.tweet.timestamp}</span>
         </div>
 
         <p className="message">
-          Tendremos los vinilos en clase para la vuelta del puente
+         {props.tweet.message}
         </p>
 
         <div className="actions">
