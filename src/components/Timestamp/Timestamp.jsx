@@ -1,7 +1,7 @@
 const Timestamp=(props)=> {
     
     return (
-        <span className="timestamp">{props.tweet.timestamp}</span>
+        <span className="timestamp">{props.timestamp}</span>
     )
   }
 

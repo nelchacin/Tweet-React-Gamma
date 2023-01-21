@@ -2,7 +2,7 @@ const ProfileImage=(props)=> {
     
     return (
         <img
-        src={props.tweet.image}
+        src={props.image}
         className="profile"
         alt="profile"
       />
